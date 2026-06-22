@@ -12,8 +12,9 @@ const app = express();
  // allow our React frontend to talk to this backend
           app.use(cors({
   origin: [
-    'http://localhost:5173',                                    // for local development
-    'https://golf-charity-platform-ycp8-8yc4isyfd.vercel.app', // your Vercel URL
+    'http://localhost:5173',
+    'https://golf-charity-platform-ycp8.vercel.app',
+    'https://golf-charity-platform-ycp8-8yc4isyfd.vercel.app',
   ],
   credentials: true,
 }));
