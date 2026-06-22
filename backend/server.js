@@ -9,7 +9,14 @@ require('dotenv').config();
 const app = express();
 
 // ---- MIDDLEWARE ----
-app.use(cors());           // allow our React frontend to talk to this backend
+ // allow our React frontend to talk to this backend
+          app.use(cors({
+  origin: [
+    'http://localhost:5173',                                    // for local development
+    'https://golf-charity-platform-ycp8-8yc4isyfd.vercel.app', // your Vercel URL
+  ],
+  credentials: true,
+}));
 app.use(express.json());   // allow the server to read JSON from request bodies
 
 // Serve uploaded proof images as static files (so the frontend can display them)
