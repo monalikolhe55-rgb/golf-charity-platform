@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Small global tweaks */
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
